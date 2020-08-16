@@ -2,7 +2,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: book
-  namespace: console-app
+  namespace: console-app ## Project Name
 spec:
   selector:
     matchLabels:
@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
         - name: book
-          image: 'quay.io/redhattraining/books:v0.9'
+          image: 'quay.io/redhattraining/books:v0.9' ## Image path but it will give errors which we will troubleshoot further then modify to quay.io/redhattraining/books:v1.4
           ports:
             - containerPort: 8080
               protocol: TCP
@@ -25,7 +25,7 @@ spec:
               port: 8080
           env:
             - name: DB_HOST
-              value: database.console-apps.svc.cluster.local
+              value: database.console-apps.svc.cluster.local ## Database hostname or we can take cluster IP of Database Pod
             - name: DB_PORT
               value: '5432'
             - name: DB_USER
