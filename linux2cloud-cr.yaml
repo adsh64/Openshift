@@ -1,0 +1,7 @@
+kind: Linux2cloudDb
+metadata:
+  name: okddb
+spec:
+user: developer
+password: secret
+foo: bar
