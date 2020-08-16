@@ -1,0 +1,14 @@
+apiVersion: apiextensions.k8s.io/v1beta1 
+kind: CustomResourceDefinition
+metadata:
+  name: linux2clouddbs.db.example.com
+spec:
+  group: db.example.com 
+  version: v1 
+  scope: Namespaced 
+  names:
+    plural: linux2clouddbs
+    singular: linux2clouddb
+    kind: Linux2cloudDb
+    shortNames:
+    - l2cdb
