@@ -1,0 +1,10 @@
+1.	Remove the privilege to create new projects from all users. Verify that the role has been removed from the group
+2.	Create a user demo-admin, set the password, login with user and try to create project, (demo-project).
+3.	Create a project (demo-project) with admin and add project administration privileges to the demo-admin
+4.	Create the sysadmin and sysaudit groups and user1-admin and user2-audit user and add their respective groups.
+5.	As the demo-user, assign  write privileges for sysadmin and read privileges for sysaudit
+6.	to the demo-project project.
+7.	Review all role bindings on the demo-project to verify that they assign roles to the correct groups and users. 
+8.	As the user user1-admin, deploy an Apache HTTP Server to prove that it has write privileges in the project. 
+9.	Try to grant write privileges to the user user2-audit to prove that the developer user has no project administration privileges. Attempt to scale the httpd application. It should fail.
+10.	Restore project creation privileges to all users.
