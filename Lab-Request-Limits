@@ -1,0 +1,10 @@
+Lab
+As the developer user, create a new project named schedule-limit. 
+•	Create a deployment resource file of an application, name the application hello-limit and use the container image located at quay.io/redhattraining/hello-worldnginx:v1.0. Use --dry-run -o yaml to get yaml file.
+# oc create deployment ngnix-apache --image=quay.io/redhattraining/hello-world-nginx:v1.0 --dry-run -o yaml > ngnix-deploy.yaml
+•	Edit deployment resource file (ngnix-deploy.yaml) and set Request Resource Quota (Memory=20Mi and CPU=3)
+•	Apply deployment resource file and verify the pod’s status, events and logs, then again review ngnix-deploy.yaml and change cpu: “2” and re-apply it.
+# oc get events --field-selector type=Warning
+•	Manually scale the hello-limit application up to 3 pods (more than cluster node available). And review the events and logs. 
+•	Delete all of the resources associated with the hello-limit application.
+Note: While we manually scale, it will not allow running the pod as no free nodes are available which should have 3 or 2 CPU
