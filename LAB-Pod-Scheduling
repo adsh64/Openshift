@@ -1,0 +1,11 @@
+Lab
+1.	As the developer user, create a new project named schedule-pods
+2.	Create a new application named hello using the container located at quay.io/redhattraining/hello-world-nginx:v1.0
+3.	Create a service for the application.
+4.	Make the service accessible by creating a route to it.
+5.	Manually scale the application so there are four running pods
+6.	Prepare the worker nodes so that application workloads can be distributed to either development or production nodes by assigning the env label. Assign the env=dev label to the first worker node and the env=prod label to the second worker node.
+7.	Switch back to the developer user and modify the hello application so that it is deployed to the development node
+8.	Verify that the application pods are deployed to the node with the env=dev label. Although it makes take a little time to redeploy, the application pods must be deployed to the same worker node that previously identified.
+9.	Remove the schedule-pods project.
+10.	Removing the env label from the worker nodes.
