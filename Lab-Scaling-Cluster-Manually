@@ -1,0 +1,7 @@
+Lab
+1.	Set label env=prod for worker node2 and create new node as replica of node2
+2.	Create new project (scale manual) that deploy pod only in node having env=prod label
+3.	Assign admin role to developer user on scale manual project
+4.	Create new deployment in scale-manual with “quay.io/redhattraining/hello-world-nginx:v1.0.”
+5.	Scale the apps upto 4 replicas.
+6.	Verify all replicas are running on node having lable=prod
