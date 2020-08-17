@@ -1,0 +1,22 @@
+Lab
+1.	Log in to the OpenShift web console as the admin user
+2.	Add htpasswd entries for users named dba and tester
+3.	Create a new app-team group that contains the developer and dba users.
+4.	Create a new console-review project with a view role binding for the tester user and an edit role binding for the app-team group. 
+5.	Set a resource quota that limits the project to three pods.
+6.	Install the Community CockroachDB operator for use in all namespaces.
+7.	Create a RoleBinding that allows the dba user to view resources in the openshift operators project.
+8.	As the dba user, deploy a CockroachDB database instance into the console-review project using the OpenShift web console. This will bring the project’s total pod count to three.
+9.	As the developer user, create a deployment, service, and route in the console-review project with issues that you will troubleshoot in the next step. Use the quay.io/redhattraining/exoplanets:v1.0 image, and name all of the new resources exoplanets.
+When correctly configured, the exoplanets application connects to the CockroachDB cluster and displays a list of planets located outside of our solar system.
+You can copy the deployment and service YAML resources from below link
+https://github.com/linux2cloud/Openshift/blob/master/deployment-exoplanets.yaml
+https://github.com/linux2cloud/Openshift/blob/master/service-exoplanets.yaml
+Specify the following environment variables in the deployment
+Name Value
+DB_HOST localhost
+DB_PORT '26257'
+DB_USER root
+DB_NAME postgres
+10.	Troubleshoot and fix the deployment issues.
+11.	Navigate to the exoplanets website in a browser and observe the working application.
