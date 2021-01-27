@@ -1,4 +1,3 @@
-# cat Dockerfile 
 FROM centos:latest
 MAINTAINER Linux2Cloud
 RUN yum -y install httpd
